@@ -12,7 +12,7 @@ def solution(A, K):
     head = A[:K]
     tail = A[K:]
     ans = tail + head
-    print(ans)
+    #print(ans)
     return ans
 
 test = ([3, 8, 9, 7, 6], 3, 
