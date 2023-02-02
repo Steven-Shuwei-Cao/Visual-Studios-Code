@@ -12,8 +12,8 @@ def solution(A):
     if not A:
         return 1
     A.sort() #easier to check even/odd with a sorted array
-    for i in range(0, len(A), 2):
-        if i + 1 == len(A):
+    for i in range(0, len(A), 2): #jump 2 indexes at a time, since they all have pairs expect for the odd one
+        if i + 1 == len(A): #last element must be the odd one out
             return A[i]
         #print(A[i], A[i+1])
         if A[i] != A[i+1]:

@@ -10,9 +10,9 @@ import unittest
 
 def solution(X, Y, D):
     dist = Y - X
-    if dist % D != 0:
+    if dist % D != 0: #no incomplete jumps
         return int(dist/D) + 1
-    return int(dist/D)
+    return int(dist/D) #return type int() because '/' makes it a float
 
 
 test = (10,85,30,3), (125,1111,33,30)

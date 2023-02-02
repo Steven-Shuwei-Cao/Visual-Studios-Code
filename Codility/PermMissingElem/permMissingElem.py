@@ -12,7 +12,7 @@ def solution(A):
     if not A:
         return 1
     n = len(A) + 1
-    expected = n * (n + 1) // 2
+    expected = n * (n + 1) // 2 #triangular number formula
     #print(expected, sum(A), expected - sum(A))
     return expected - sum(A)
     

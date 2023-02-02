@@ -9,12 +9,12 @@
 import unittest
 
 def solution(N):
-    bin_n = bin(N)[2:]
+    bin_n = bin(N)[2:] #convert input to binary
     lowest = 0; temp = 0
     
     #iterative approach
     for ele in bin_n:
-        if ele == bin(0)[2:]:
+        if ele == bin(0)[2:]: #even tho we are only looking for 0's, we still need the binary form to compare types
             temp += 1
             continue
         if temp > lowest:
