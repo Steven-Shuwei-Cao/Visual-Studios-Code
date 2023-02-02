@@ -1,8 +1,9 @@
 #==========================================
 # Title:  Codility CyclincRotation
 # Author: Steven Cao
-# Date:   7 Jan 2011
+# Date:   1 Feb 2023
 # Score:  100/100
+# Errors: Ran into minor errors when K = K % len(A) was mistakenly written as K = len(A) % K
 #==========================================
 
 import unittest

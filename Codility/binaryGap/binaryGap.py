@@ -1,8 +1,9 @@
 #==========================================
 # Title:  Codility BinaryGap
 # Author: Steven Cao
-# Date:   7 Jan 2011
+# Date:   1 Feb 2023
 # Score:  100/100
+# Errors: N/A
 #==========================================
 
 import unittest
