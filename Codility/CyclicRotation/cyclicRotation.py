@@ -8,14 +8,18 @@
 import unittest
 
 def solution(A, K):
-    K = len(A) % K #if k > len(A), we only need the remainder since it will loop around
-    head = A[:K]
-    tail = A[K:]
+    if K == 0 or K == len(A) or not A: #no rotation/full complete rotation/empty array => return original array
+        return A
+    if K > len(A): #if k > len(A), we only need the remainder since it will loop around
+        K = K % len(A) 
+    #print(A, K, len(A))
+    head = A[:len(A)-K]
+    tail = A[len(A)-K:]
     ans = tail + head
-    #print(ans)
+    #print(head, tail)
     return ans
 
-test = ([3, 8, 9, 7, 6], 3, [9, 7, 6, 3, 8]), ([0, 0, 0], 1, [0, 0, 0]), ([1, 2, 3, 4], 4, [1, 2, 3, 4])
+test = ([3, 8, 9, 7, 6], 3, [9, 7, 6, 3, 8]), ([0, 0, 0], 1, [0, 0, 0]), ([1, 2, 3, 4], 4, [1, 2, 3, 4]), ([5, -1000], 1,  [-1000, 5]), ([1, 1, 2, 3, 5], 42, [3, 5, 1, 1, 2])
 
 class TestStringMethods(unittest.TestCase):
 
