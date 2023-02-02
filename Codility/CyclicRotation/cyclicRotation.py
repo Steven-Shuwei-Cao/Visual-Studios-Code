@@ -11,7 +11,7 @@ import unittest
 def solution(A, K):
     if K == 0 or K == len(A) or not A: #no rotation/full complete rotation/empty array => return original array
         return A
-    if K > len(A): #if k > len(A), we only need the remainder since it will loop around
+    if K > len(A): #if K > len(A), we only need the remainder since it will loop around
         K = K % len(A) 
     #print(A, K, len(A))
     head = A[:len(A)-K]
