@@ -1,7 +1,7 @@
 import requests
 
 def get_weather(location):
-    api_key = "9f7d94bff1ac90714ba5fe4a73ca1e39"
+    api_key = "api_key"
     url = f"http://api.openweathermap.org/data/2.5/weather?q={location}&appid={api_key}"
     response = requests.get(url)
     if response.status_code == 200:
